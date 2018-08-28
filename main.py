@@ -12,7 +12,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = "Who is Who in Myanmar"
 db = SQLAlchemy(app)
 
 
-@app.route('/'):
+@app.route("/"):
     def index():
         return render_template("index.html")
 
