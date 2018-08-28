@@ -11,10 +11,15 @@ app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = "Who is Who in Myanmar"
 db = SQLAlchemy(app)
 
+
+@app.route('/'):
+    def index():
+        return render_template("index.html")
+
 search_name = ""
 
 @app.route('/',methods=['POST','GET'])
-def home():
+def search():
     people = Person.query.all()
 
     if request.method == 'POST':
