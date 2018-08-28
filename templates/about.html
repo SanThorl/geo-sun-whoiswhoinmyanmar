@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <meta name="theme-color" content="#2F3BA2">
+    <link href="{{ url_for('static', filename='img/Flag.PNG') }}" rel="icon" />
+
+    <title>Who is who in Myanmar</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ url_for('static', filename='css/mdb.css') }}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/material.css') }}">
+    <script src="{{ url_for('static', filename='js/material.js') }}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+</head>
+
+<body class="mdl-color--light-blue-300">
+
+
+
+    <!--Main Navigation-->
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
+                    <strong class="blue-text"></strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="https://realproject-whoiswhoinmyanmar.herokuapp.com/">Home
+                                
+                            </a>
+                        </li>
+                        <li class="nav-item">
+				<a class="nav-link waves-effect" href="aboutparli.html">Politician</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="aboutwriter.html">Writer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="aboutdirector.html">Director</a>
+                        </li>
+			<li class="nav-item active">
+				<a class="nav-link waves-effect" href="aboutactor.html">Actor<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link waves-effect" href="aboutsinger.html">Singer</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link waves-effect" href="help.html">Help</a>
+			</li>
+                    </ul>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/ah.thawm" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com/SThawm" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/SanThorl/" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+                                <i class="fa fa-github mr-2"></i>GitHub
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed">
+
+            <a class="logo-wrapper waves-effect">
+		    <img src="{{ url_for('static', filename='img/Flag.PNG') }}" class="img-fluid" alt="">
+            </a>
+
+            <div class="list-group list-group-flush">
+                <a href="https://realproject-whoiswhoinmyanmar.herokuapp.com/" class="list-group-item waves-effect">
+			
+                    Home
+		</a>
+                <a href="aboutparli.html" class="list-group-item waves-effect">
+                    Politician
+		</a>
+                <a href="aboutwriter.html" class="list-group-item waves-effect">
+                    Writer
+		</a>
+                <a href="aboutdirector.html" class="list-group-item waves-effect">
+                    Director
+		</a>
+		<a href="aboutactor.html" class="list-group-item active aves-effect">
+			Actor
+		</a>
+		<a href="aboutsinger.html" class="list-group-item waves-effect">
+			Singer
+		</a>
+		<a href="help.html" class="list-group-item waves-effect">
+			Help
+		</a>
+                            </div>
+
+        </div>
+        <!-- Sidebar -->
+
+    </header>
+
+
+
+
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="pt-5 mx-lg-5">
+        <div class="container-fluid mt-5">
+
+
+		<h2><font color="black">ABOUT</h2>
+
+<table border="2px">
+  <tr>
+    <th>Team Member</th>
+    <th>Team Roles</th>
+    <th>Skills/Requirements</th>
+  </tr>
+  <tr>
+    <td>Ma San Thorl</td>
+    <td>Team Lead, Lead Developer + DevOps</td>
+    <td><p align="justify">General Passion for all the technologies invovled in creating software.Specific skill and expertise in at least one role is a requirement and is also responsible for monitoring, reporting and proper and timely project execution.Strongest programming and system administration skills in the group.</p></td>
+  </tr>
+  <tr>
+    <td>Ma Aye Thiri Kyaw</td>
+    <td>UI/UX Lead</td>
+    <td><p align="justify">Passtion for design and userability.Someone who can think like a normal user.In this program he/she must have skills in HTML/CSS/JS and must learn a few frameworks such as BootStrap, Material Design, Angular and so on.Use of graphics tools and mockup tools.</p></td>
+  </tr>
+  <tr>
+    <td>Ma Lwin Me Me Khaing</td>
+    <td>UI/UX Dev</td>
+    <td>Same as UI/UX Lead</td>
+  </tr>
+  <tr>
+    <td>Ma Ei Ei Lin</td>
+    <td>Dev1</td>
+    <td><p align="justify">Good logical thinking skill.Confortable with writing and rewriting code and reading and learning from other devs code.Either dev one or two must write code for Unit Test as well.</p></td>
+  </tr>
+  <tr>
+    <td>Ma Zin Mar Kyaw</td>
+    <td>Dev2</td>
+    <td><p align="justify">Good logical thinking skill.Confortable with writing and rewriting code and reading and learning from other devs code.</p></td>
+    
+  </tr>
+  <tr>
+    <td>Ma Hnin Yamone Nwae</td>
+    <td>Test and Documentation</td>
+    <td><p align="justify">Have clear and conciese writing skills.Understands the value of documentation.</p></td>
+  </tr>
+</table><br><br><br>
+
+	</div>
+    </main>
+
+
+
+          </body>
+
+</html>

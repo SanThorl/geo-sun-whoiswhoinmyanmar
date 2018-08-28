@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <meta name="theme-color" content="#2F3BA2">
+    <link href="{{ url_for('static', filename='img/Flag.PNG') }}" rel="icon" />
+
+    <title>Who is who in Myanmar</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ url_for('static', filename='css/mdb.css') }}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/material.css') }}">
+    <script src="{{ url_for('static', filename='js/material.js') }}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 3px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+</style>
+</head>
+
+<body class="mdl-color--light-blue-300">
+
+
+
+    <!--Main Navigation-->
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
+                    <strong class="blue-text"></strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="https://realproject-whoiswhoinmyanmar.herokuapp.com/">Home
+                                
+                            </a>
+                        </li>
+                        <li class="nav-item">
+				<a class="nav-link waves-effect" href="aboutparli.html">Politician</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="aboutwriter.html">Writer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="aboutdirector.html">Director</a>
+                        </li>
+			<li class="nav-item active">
+				<a class="nav-link waves-effect" href="aboutactor.html">Actor<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link waves-effect" href="aboutsinger.html">Singer</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link waves-effect" href="help.html">Help</a>
+			</li>
+                    </ul>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/ah.thawm" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com/SThawm" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/SanThorl/" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+                                <i class="fa fa-github mr-2"></i>GitHub
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed">
+
+            <a class="logo-wrapper waves-effect">
+		    <img src="{{ url_for('static', filename='img/Flag.PNG') }}" class="img-fluid" alt="">
+            </a>
+
+            <div class="list-group list-group-flush">
+                <a href="https://realproject-whoiswhoinmyanmar.herokuapp.com/" class="list-group-item waves-effect">
+			
+                    Home
+		</a>
+                <a href="aboutparli.html" class="list-group-item waves-effect">
+                    Politician
+		</a>
+                <a href="aboutwriter.html" class="list-group-item waves-effect">
+                    Writer
+		</a>
+                <a href="aboutdirector.html" class="list-group-item waves-effect">
+                    Director
+		</a>
+		<a href="aboutactor.html" class="list-group-item active aves-effect">
+			Actor
+		</a>
+		<a href="aboutsinger.html" class="list-group-item waves-effect">
+			Singer
+		</a>
+		<a href="help.html" class="list-group-item waves-effect">
+			Help
+		</a>
+                            </div>
+
+        </div>
+        <!-- Sidebar -->
+
+    </header>
+
+
+
+
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="pt-5 mx-lg-5">
+        <div class="container-fluid mt-5">
+
+<table>
+  <tr>
+	  <th><p align="center"><i>Category</i></p></th>
+	  <th><p align="center"><i>Skill</i></p></th>
+	  <th><p align="center"><i>Skill Sets</i></p></th>
+  </tr>
+  <tr>
+    <td>Common Core</td>
+    <td>Git Basics</td>
+    <td>Setup Git,Initial Git,Commit,Merge,Branch,add/remove remotes</td>
+  </tr>
+  <tr>
+    <td>Common Core</td>
+    <td>Github Basics</td>
+    <td>Setup Repos,Import exisiting repo,Create new repo,Work with multiple remotes(origin,heroku etc)</td>
+  </tr>
+  <tr>
+    <td>Common Core</td>
+    <td>VIM Basics</td>
+    <td>Navigate VIM with hjkl;Move in and out of VISUAL and INSERT modes;Master navigation commans such as w,W,e,b,B;Search,search and replace,delete spefice characters; </td>
+  </tr>
+  <tr>
+    <td>Common Core</td>
+    <td>Static Page on Github</td>
+    <td>Learn Basic of setting up a github.io page.Fork a Personal Page and turn this into personal profile page on github.io</td>
+  </tr>
+  <tr>
+    <td>Common Core</td>
+    <td>Python Practice</td>
+    <td>Complete Learn Python the Hardway and Learn Python on Code Academy</td>
+  </tr>
+  <tr>
+    <td>Common Core</td>
+    <td>Git Practice</td>
+    <td>Complete Git Tutorial on CodeAcademy and Github.Work on LPTH exercise with git and GitHub</td>
+  </tr>
+<tr>
+<td>Common Core</td>
+<td>HTML Practice</td>
+<td>Basic HTML and HTML5.Basic CSS(Optionally Flexbox,CSS Grid)on FreeCodeCamp</td>
+</tr>
+<tr>
+<td>Common Core</td>
+<td>Heroku Basics</td>
+<td>Deploy,Debug and Log on Heroku</td>
+</tr>
+<tr>
+<td>Common Core</td>
+<td>JavaScript Practice</td>
+<td>Basic JavaScript on FreeCodeCamp</td>
+</tr>
+<tr>
+<td>Common Core</td>
+<td>Front End Development with Material Design</td>
+<td>Develop UIs with Materializecss+MDL. Replicate two sites using MD.(Lostfootsteps+Yduck)</td>
+</tr>
+<tr>
+<td>Data Binding</td>
+<td>KnockOutJS</td>
+<td>Use KnockOut.JS to bind data.</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Who is Who in Myanmar</td>
+<td>Develop a FrontEnd UI for Who is Who in Myanmar.Develop a simple table to store who is who data.Use SQLAlchemy as a database backend.Bind data to UI using KnockOutJS</td>
+</tr>
+</table><br><br>
+
+
+	</div>
+    </main>
+
+
+
+          </body>
+
+</html>

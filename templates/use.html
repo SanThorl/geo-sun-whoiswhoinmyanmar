@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <meta name="theme-color" content="#2F3BA2">
+    <link href="{{ url_for('static', filename='img/Flag.PNG') }}" rel="icon" />
+
+    <title>Who is who in Myanmar</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ url_for('static', filename='css/mdb.css') }}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/material.css') }}">
+    <script src="{{ url_for('static', filename='js/material.js') }}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body class="mdl-color--light-blue-300">
+
+
+
+    <!--Main Navigation-->
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
+                    <strong class="blue-text"></strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect" href="https://realproject-whoiswhoinmyanmar.herokuapp.com/">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+				<a class="nav-link waves-effect" href="aboutparli.html">Politician</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="aboutwriter.html">Writer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="aboutdirector.html">Director</a>
+                        </li>
+			<li class="nav-item">
+				<a class="nav-link waves-effect" href="aboutactor.html">Actor</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link waves-effect" href="aboutsinger.html">Singer</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link waves-effect" href="help.html">Help</a>
+			</li>
+                    </ul>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/ah.thawm" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com/SThawm" class="nav-link waves-effect" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/SanThorl/" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+                                <i class="fa fa-github mr-2"></i>GitHub
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed position-fixed">
+
+            <a class="logo-wrapper waves-effect">
+		    <img src="{{ url_for('static', filename='img/Flag.PNG') }}" class="img-fluid" alt="">
+            </a>
+
+            <div class="list-group list-group-flush">
+                <a href="https://realproject-whoiswhoinmyanmar.herokuapp.com/" class="list-group-item active waves-effect">
+			
+                    Home
+		</a>
+                <a href="aboutparli.html" class="list-group-item waves-effect">
+                    Politician
+		</a>
+                <a href="aboutwriter.html" class="list-group-item waves-effect">
+                    Writer
+		</a>
+                <a href="aboutdirector.html" class="list-group-item waves-effect">
+                    Director
+		</a>
+		<a href="aboutactor.html" class="list-group-item waves-effect">
+			Actor
+		</a>
+		<a href="aboutsinger.html" class="list-group-item waves-effect">
+			Singer
+		</a>
+		<a href="help.html" class="list-group-item waves-effect">
+			Help
+		</a>
+                            </div>
+
+        </div>
+        <!-- Sidebar -->
+
+    </header>
+
+
+
+
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="pt-5 mx-lg-5">
+        <div class="container-fluid mt-5">
+
+<div style="width:55%; overflow:hidden">
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+	    <img class="activator" src="{{ url_for('static', filename='img/GitHub.jpg') }}" height="110px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">GitHub<i class="material-icons right">more_vert</i></span>
+      <p>
+      <a href="https://github.com/" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+                                <i class="fa fa-github mr-2"></i>GitHub
+                            </a>
+      </p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">What is GitHub?<i class="material-icons right">close</i></span>
+      <p align="justify">GitHub is a web-based version-control and collaboration platform for software developers.Microsoft, the biggest single contributor to GitHub, initiated an acquisition of GitHub for $7.5 billion in June,2018.GitHub, which is delivered through a software-as-a-service (SaaS)business model, was started in 2008 and was founded on Git, an open source code management system created by Linus Torvalds to make software builds faster.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div style="width:55%; overflow:hidden">
+
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+	    <img class="activator" src="{{ url_for('static', filename='img/python.PNG') }}" height="110px">
+    </div>
+    <div class="card-content">
+      	    <span class="card-title activator grey-text text-darken-4">Python<i class="material-icons right">more_vert</i></span>
+<a href="https://www.google.com/search?q=python+programming&ie=utf-8&oe=utf-8&client=firefox-b-ab" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+                                Python
+                            </a>
+         </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">What is Python?<i class="material-icons right">close</i></span>
+      <p align="justify">Python is an interpreted,object-oriented,high-level programming language with dynamic semantics.Its high-level built in data structures,combined with dynamic typing and dynamic binding,make it very attractive for Rapid Application Development,as well as for use as a scripting or glue language to connect existing components together.Python's simple, easy to learn syntax emphasizes readability.Python supports modules and packages.</p>
+    </div>
+  </div>
+</div>
+
+
+<div style="width:55%; overflow:hidden">
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+	    <img class="activator" src="{{ url_for('static', filename='img/heroku.PNG') }}" height="120px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Heroku<i class="material-icons right">more_vert</i></span>
+      <p>
+      <a href="https://heroku.com/" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+                                Heroku
+                            </a>
+      </p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">What is Heroku?<i class="material-icons right">close</i></span>
+      <p align="justify">Heroku is a container-based cloud Platform as a Service(PaaS).Developers use Heroku to deploy,manage,and scale modern apps.Our platform is elegant,flexible,and easy to use,offering developers the simplest path to getting their apps to market.Heroku is fully managed,giving developers the freedom to focus on their core product without the distraction of maintaining servers,hardware,or infrastructure.The Heroku experience provides services,tools,workflows,and polyglot support-all designed to enhance developer productivity.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div style="width:55%; overflow:hidden">
+
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+	    <img class="activator" src="{{ url_for('static', filename='img/materialcss.png') }}" height="120px">
+    </div>
+    <div class="card-content">
+      	    <span class="card-title activator grey-text text-darken-4">Materializecss<i class="material-icons right">more_vert</i></span>
+<a href="https://materializecss.com/" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+	<font face="Vladimir Script">M</font>
+                            </a>
+         </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">What is Materializecss?<i class="material-icons right">close</i></span>
+      <p align="justify">Materialize CSS is a UI component library which is created with CSS, JavaScript and HTML.It is created and designed by Google.Materialize CSS is also known as Material Design.It is a design language which combines the classic principles of successful design along with innovation and technology.</p>
+    </div>
+  </div>
+</div>
+
+<div style="width:55%; overflow:hidden">
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+	    <img class="activator" src="{{ url_for('static', filename='img/mdl.jpg') }}" height="120px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Material design lite<i class="material-icons right">more_vert</i></span>
+      <p>
+      <a href="https://getmdl.io/" class="nav-link border border-light rounded waves-effect"
+                                target="_blank">
+                                MDL
+                            </a>
+      </p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">What is Material Design Lite?<i class="material-icons right">close</i></span>
+      <p align="justify">Material Design Lite lets you add a Material Design look and feel to your websites.It doesn't rely on any JavaScript frameworks and aims to optimize for across-device use,gracefully degrade in older browsers,and offer an experience that is immediately accessible.</p>
+    </div>
+  </div>
+
+</div>
+
+	</div>
+    </main>
+
+
+
+          </body>
+
+</html>
