@@ -10,24 +10,19 @@ app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = "Who is Who in Myanmar"
 db = SQLAlchemy(app)
 
-@app.route("/"):
-    def index():
-        return render_template("index.html")
+@app.route("/")
+def index():
+    return render_template("index.html")
 
-search_name = ""
-
-@app.route('/',methods=['POST','GET'])
+@app.route('/', methods=['POST', 'GET'])
 def search():
-    people = Person.query.all()
-
     if request.method == 'POST':
         search = request.form['search']
         names = Person.query.order_by(Person.name).all()
-        results = Person.query.filter(Person.name.like('%' + search + '%')).all()
-        return render_template("search.html", results = results)
-    return render_template("index.html", people=people)
+        results = Person.query.filter(Person.name.like('%', + search + '%')).all()
+        return render_template("search.html", results=results)
 
-@app.route('/abutparli.html', methods=['POST', 'GET'])
+@app.route('/aboutparli.html', methods=['POST', 'GET'])
 def politician():
     politician = Person.query.filter(Person.profession=="politician").all()
     return render_template("aboutparli.html", politician=politician)
