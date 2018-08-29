@@ -14,13 +14,12 @@ db = SQLAlchemy(app)
 def index():
     return render_template("index.html")
 
-@app.route('/', methods=['POST', 'GET'])
+search = ""
+@app.route('/search.html', methods=['POST', 'GET'])
 def search():
-    if request.method == 'POST':
-        search = request.form['search']
-        names = Person.query.order_by(Person.name).all()
-        results = Person.query.filter(Person.name.like('%', + search + '%')).all()
-        return render_template("search.html", results=results)
+    search = request.form['search']
+    results = Person.query.filter(Person.name.contains(search)).all()
+    return render_template("search.html", results=results)
 
 @app.route('/aboutparli.html', methods=['POST', 'GET'])
 def politician():
@@ -46,6 +45,34 @@ def actor():
 def singer():
     singer = Person.query.filter(Person.profession=="singer").all()
     return render_template("aboutsinger.html", singer=singer)
+
+@app.route("/about.html", methods=['POST', 'GET'])
+def about():
+    return render_template("about.html")
+
+@app.route("/help.html", methods=['POST', 'GET'])
+def help():
+    return render_template("help.html")
+
+@app.route("/method.html", methods=['POST', 'GET'])
+def method():
+    return render_template("method.html")
+
+@app.route("/use.html", methods=['POST', 'GET'])
+def use():
+    return render_template("use.html")
+
+@app.route("/contact.html", methods=['POST', 'GET'])
+def contact():
+    return render_template("contact.html")
+
+@app.route("/qa.html", methods=['POST', 'GET'])
+def qa():
+    return render_template("qa.html")
+
+@app.route("/partner.html", methods=['POST', 'GET'])
+def partner():
+    return render_template("partner.html")
 
 class Person(db.Model):
     id = db.Column(db.Integer,primary_key=True)
