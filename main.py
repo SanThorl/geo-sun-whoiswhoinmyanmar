@@ -15,9 +15,12 @@ def index():
     return render_template("index.html")
 
 search = ""
-@app.route('/search.html', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def search():
+    people = Person.query.all()
+
     search = request.form['search']
+    names = Person.query.order_by(Person.name).all()
     results = Person.query.filter(Person.name.contains(search)).all()
     return render_template("search.html", results=results)
 
